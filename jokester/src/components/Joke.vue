@@ -1,6 +1,7 @@
 <template>
   <div class="col-md-6">
     <div class="joke-card">
+      <button class="close" @click="removeJoke(index)"><span>&times;</span></button>
       <p><u>{{joke.setup}}</u></p>
       <p><em>{{joke.punchline}}</em></p>
     </div>
@@ -9,8 +10,11 @@
 
 <script>
 
+import { mapActions } from 'vuex'
 export default {
-  props: ['joke']
+  props: ['joke', 'index'],
+  methods: mapActions([
+    'removeJoke'
+  ])
 }
-
 </script>
