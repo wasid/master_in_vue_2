@@ -2,7 +2,6 @@
   <div class="col-md-offset-4">
       <div class="col-md-6">
       <h3>Signin Form</h3>
-      <form>
         <div class="form-group">
           <label for="email">Email address:</label>
           <input type="email" class="form-control" placeholder="email" v-model="email">{{email}}
@@ -11,18 +10,31 @@
           <label for="pwd">Password:</label>
           <input type="password" class="form-control" placeholder="password" v-model="password">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <br>
+          <p>{{ error.message }}</p>
+        <button class="btn btn-primary"  @click="signIn">Submit</button>
     </div>
   </div>
 </template>
 
 <script>
+import { firebaseApp } from '../firebaseApp'
 export default {
   data () {
     return {
       email: '',
-      password: ''
+      password: '',
+      error: {
+        message: ''
+      }
+    }
+  },
+  methods: {
+    signIn() {
+      firebaseApp.auth().signInWithEmailAndPassword(this.email, this.password)
+        .catch(error => {
+          this.error = error
+        })
     }
   }
 }
