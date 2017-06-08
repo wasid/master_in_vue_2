@@ -2,3 +2,4 @@
   <div id="">
     Dashboard Route
   </div>
+</template>
