@@ -1,6 +1,6 @@
 <template>
-  <div class="col-md-offset-4">
-      <div class="col-md-6">
+  <div class="col-sm-offset-4">
+      <div class="col-sm-6">
       <h3>Signin Form</h3>
         <div class="form-group">
           <label for="email">Email address:</label>
