@@ -25,9 +25,8 @@ a {
   color: #42b983;
 }
 
-.joke-card {
-  border: 2px solid #42b983;
-  border-radius: 2px;
-  padding: 5px;
-  margin: 5px;
+.event-card {
+  border: 2px solid #2C3E50;
+  margin-top: 10px;
+  border-radius: 4px;
 }
