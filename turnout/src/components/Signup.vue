@@ -12,7 +12,7 @@
         </div>
         <br>
           <p>{{ error.message }}</p>
-        <button class="btn btn-primary"  @click="signUp">Sign Up</button>
+        <button class="btn btn-primary" @click="signUp">Sign Up</button>
         <br>
         <br>
         <router-link to="/signin">Already a user? Sign In!</router-link>

@@ -8,7 +8,7 @@
       <br>
       <br>
       <div class="col-sm-12">
-        {{ $store.state }}
+        {{ $store.state.events }}
       </div>
   </div>
 </template>
@@ -31,7 +31,7 @@
       snap.forEach(event => {
         events.push(event.val())
       })
-      console.log(events)
+      this.$store.dispatch('setEventsRush', events)
     })
   }
 }
