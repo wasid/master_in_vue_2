@@ -1,7 +1,7 @@
 <template>
   <div class="col-sm-offset-4">
       <div class="col-sm-6">
-      <h3>Sign In Form</h3>
+      <h3>Sign Up Form</h3>
         <div class="form-group">
           <label for="email">Email address:</label>
           <input type="email" class="form-control" placeholder="email" v-model="email">{{email}}
@@ -12,10 +12,10 @@
         </div>
         <br>
           <p>{{ error.message }}</p>
-        <button class="btn btn-primary"  @click="signIn">Sign in</button>
+        <button class="btn btn-primary"  @click="signUp">Sign Up</button>
         <br>
         <br>
-        <router-link to="/signup">Not a user? Sign Up!</router-link>
+        <router-link to="/signin">Already a user? Sign In!</router-link>
     </div>
   </div>
 </template>
@@ -33,8 +33,8 @@ export default {
     }
   },
   methods: {
-    signIn() {
-      firebaseApp.auth().signInWithEmailAndPassword(this.email, this.password)
+    signUp() {
+      firebaseApp.auth().createUserWithEmailAndPassword(this.email, this.password)
         .catch(error => {
           this.error = error
         })
