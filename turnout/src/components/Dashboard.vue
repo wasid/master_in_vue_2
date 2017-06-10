@@ -24,6 +24,15 @@
   },
   components: {
     AddEvent
+  },
+  mounted() {
+    eventsRef.on('value', snap => {
+      let events = []
+      snap.forEach(event => {
+        events.push(event.val())
+      })
+      console.log(events)
+    })
   }
 }
 </script>
