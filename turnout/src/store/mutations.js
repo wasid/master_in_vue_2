@@ -10,6 +10,6 @@ export const mutations = {
   },
 
   [types.SET_EVENTS] (state, events_payload) {
-    state.events = events_payload
+    state.events_prog = events_payload
   }
 }

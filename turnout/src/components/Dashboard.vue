@@ -9,7 +9,7 @@
       <br>
       <div class="col-md-12">
         <EventItem
-          v-for="(eventItem, index) in this.$store.state.events"
+          v-for="(eventItem, index) in this.$store.state.events_prog"
           :eventing="eventItem"
           key="index"
         />

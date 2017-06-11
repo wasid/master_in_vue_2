@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 const state = {
   user: {},
-  events: []
+  events_prog: []
 }
 
 export default new Vuex.Store({
